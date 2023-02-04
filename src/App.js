@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import TodoHead from './component/TodoHead';
+import TodoTemplate from './component/TodoTemplate';
+import TodoList from './component/TodoList'
+import TodoCreate from './component/TodoCreate';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* TodoTemplate - 레이아웃을 설정 */}
+      <TodoTemplate>
+        {/* TodoHead 날짜 요일 할 일 */}
+        <TodoHead></TodoHead>
+        <TodoList></TodoList>
+        <TodoCreate></TodoCreate>
+      </TodoTemplate>
+      {/* TodoList 할 일에 대한 정보 */}
+      {/* TodoItem 체크박스 */}
+      {/* TodoCreate 추가 */}
     </div>
   );
 }
